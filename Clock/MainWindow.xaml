@@ -1,0 +1,152 @@
+﻿<Window x:Class="Clock.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="320" Width="500" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" MouseLeftButtonDown="Window_MouseLeftButtonDown" Background="{x:Null}" Topmost="True">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush TileMode="FlipX"/>
+        </Grid.Background>
+        <!--<Ellipse x:Name="imgEllipse1" HorizontalAlignment="Left" Height="300" Margin="100,0,0,0" VerticalAlignment="Top" Width="300" RenderTransformOrigin="0.52,0.51">
+            <Ellipse.Fill>
+                <SolidColorBrush Color="Red" Opacity="100"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse x:Name="imgEllipse2" HorizontalAlignment="Left" Height="300" Margin="100,0,0,0" VerticalAlignment="Top" Width="300" RenderTransformOrigin="0.52,0.51">
+            <Ellipse.Fill>
+                <SolidColorBrush Color="Green" Opacity="100"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse x:Name="imgEllipse3" HorizontalAlignment="Left" Height="300" Margin="100,0,0,0" VerticalAlignment="Top" Width="300" RenderTransformOrigin="0.52,0.51">
+            <Ellipse.Fill>
+                <SolidColorBrush Color="White" Opacity="100"/>
+            </Ellipse.Fill>
+        </Ellipse>-->
+
+        <Border BorderThickness="2" HorizontalAlignment="Left" Height="46" Margin="10,2,0,0" VerticalAlignment="Top" Width="162" CornerRadius="5">
+            <Border.Background>
+                <SolidColorBrush Color="White" Opacity="0.5"/>
+            </Border.Background>
+            <Border.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF956106" Offset="1"/>
+                    <GradientStop Color="#FFFFF484"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+        </Border>
+
+        <Image x:Name="imgDesign1" Source="Resources/945.png" Margin="0,0,0,8" >
+            <Image.Effect>
+                <DropShadowEffect Direction="300" Opacity="0.3"/>
+            </Image.Effect>
+        </Image>
+        <Image x:Name="imgDesign2" Source="Resources/395.png" Margin="0,0,0,10" >
+            <Image.Effect>
+                <DropShadowEffect Direction="300" Opacity="0.3"/>
+            </Image.Effect>
+        </Image>
+        <Image x:Name="imgDesign3" Source="Resources/936.png" Margin="0,0,0,8" >
+            <Image.Effect>
+                <DropShadowEffect Direction="300" Opacity="0.3"/>
+            </Image.Effect>
+        </Image>
+        <Image x:Name="imgDesign4" Source="Resources/956.png" Margin="0,0,0,8" >
+            <Image.Effect>
+                <DropShadowEffect Direction="300" Opacity="0.3"/>
+            </Image.Effect>
+        </Image>
+        <Image x:Name="imgDesign5" Source="Resources/429.png" Margin="0,2,0,8" >
+            <Image.Effect>
+                <DropShadowEffect Direction="300" Opacity="0.3"/>
+            </Image.Effect>
+        </Image>
+        <Path Fill="Red" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="4" Data="M244,205 L250,200 L255,205 L254,180 L252,178 L251,56 L250,52 L249,56 L247,178 L245,180 Z" Margin="0.25,-3.375,-0.25,3.375">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform x:Name="RotationSecond" Angle="35"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Path Fill="Black" Data="M245,170 L250,180 L255,170 L252,60 L250,58 L248,60 Z" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="3" Margin="-0.375,-3.25,0.375,3.25">
+
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform x:Name="RotationMinute" Angle="0"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Path Fill="Black" Data="M244,170 L250,180 L256,170 L253,76 L250,73 L247,76 Z" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="2" Margin="0,-2.75,0,2.75">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform x:Name="RotationHour" Angle="-45"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Ellipse HorizontalAlignment="Left" Height="10" Margin="245,152,0,0" VerticalAlignment="Top" Width="10" Panel.ZIndex="5">
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF55400A" Offset="1"/>
+                    <GradientStop Color="#FFFDE092"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Button Content="X" HorizontalAlignment="Left" Margin="431,2,0,0" VerticalAlignment="Top" Width="37" Height="46" FontSize="24" RenderTransformOrigin="0.489,0.526" Click="Button_Click" BorderThickness="2">
+            <Button.Foreground>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFAE730C" Offset="1"/>
+                    <GradientStop Color="#FFFDF77D"/>
+                </RadialGradientBrush>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFEFB8" Offset="0"/>
+                    <GradientStop Color="#FFAE8E21" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="White" Opacity="0.5"/>
+            </Button.Background>
+        </Button>
+        <TextBlock x:Name="datelbl" FontSize="18" HorizontalAlignment="Left" Margin="56,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="97" Height="24"/>
+        <TextBlock x:Name="datelbl2" HorizontalAlignment="Left" Margin="21,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="151" Height="24" FontSize="18" Foreground="Black"/>
+        <Button Content="Design 1" HorizontalAlignment="Left" Margin="415,91,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Foreground="Black">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFAA7606" Offset="1"/>
+                    <GradientStop Color="#FFFBEE9B"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
+        <Button Content="Design 2" HorizontalAlignment="Left" Margin="415,118,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB67400" Offset="1"/>
+                    <GradientStop Color="#FFFFF3A7"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
+        <Button Content="Design 3" HorizontalAlignment="Left" Margin="415,145,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_3">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF8F7605" Offset="1"/>
+                    <GradientStop Color="#FFFFE779"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
+        <Button Content="Design 4" HorizontalAlignment="Left" Margin="415,172,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_4">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB48405" Offset="1"/>
+                    <GradientStop Color="#FFFDF890"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
+        <Button Content="Design 5" HorizontalAlignment="Left" Margin="415,199,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_5">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB27B05" Offset="1"/>
+                    <GradientStop Color="#FFFFFA8B"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
+    </Grid>
+</Window>
